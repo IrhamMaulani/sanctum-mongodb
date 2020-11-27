@@ -41,7 +41,7 @@ trait HasApiTokens {
 	public function createToken(string $uniqueId, array $abilities = ['*']) {
 		$token = $this->tokens()->create([
 			'uniqueId' => $uniqueId,
-			'token' => hash('sha256', $plainTextToken = Str::random(80)),
+			'token' => hash('sha256', $plainTextToken = Str::random(config('sanctum.token_length', 80))),
 			'abilities' => $abilities,
 		]);
 
