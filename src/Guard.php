@@ -87,7 +87,7 @@ class Guard {
 	/**
 	 * Determine if the tokenable model matches the provider's model type.
 	 *
-	 * @param  \Illuminate\Database\Eloquent\Model  $tokenable
+	 * @param \Jenssegers\Mongodb\Eloquent\Model $tokenable
 	 * @return bool
 	 */
 	protected function hasValidProvider($tokenable) {
